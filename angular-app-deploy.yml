@@ -1,17 +1,17 @@
 - hosts: host
   become: yes
   tasks:
+    - name: installing nginx
+      apt:
+        name: nginx
+        state: latest
+        
     - name: copy built files to deploy-server
       synchronize:
         src: /var/lib/jenkins/workspace/angulark/dist/angular-hello-world/
         dest: /var/www/html/
         delete: true
         recursive: true
-
-    - name: installing nginx
-      apt:
-        name: nginx
-        state: latest
 
     - name: restart nginx
       systemd:
