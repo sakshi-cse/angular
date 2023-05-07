@@ -1,8 +1,6 @@
 pipeline{
 
-    agent{
-	label "master"
-}
+    agent any
 
     stages {
 
@@ -24,7 +22,7 @@ pipeline{
             steps {
             echo "deploying the application using ansible-playbook"
 	sh '''
-	ansible-playbook -i inventory angular-app-deploy.yml --key-file /var/lib/jenkins/ansible
+	ansible-playbook angular-app-deploy.yml --key-file /var/lib/jenkins/serverkey.pem
 	'''
 
             }
