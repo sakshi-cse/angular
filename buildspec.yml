@@ -17,7 +17,9 @@ phases:
       - ng build --configuration production --aot
   post_build:
      commands:
+      
       - echo Build completed on `date`
+      - aws s3 cp dist/ s3://angular-site-first-12/
       
 artifacts:
   files:
