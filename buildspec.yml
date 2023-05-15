@@ -18,7 +18,7 @@ phases:
   post_build:
      commands:
       - echo Build completed on `date`
-      - aws cloudfront create-invalidation --distribution-id EE5HI5GISAZI9 --paths /index.html
+      
 artifacts:
   files:
       - '**/*'
