@@ -19,7 +19,7 @@ phases:
      commands:
       
       - echo Build completed on `date`
-      - aws cloudfront create-invalidation --distribution-id E1HTVES7IBA1GD --paths s3://angular-site-first-12/angular-demo/index.html
+      - aws cloudfront create-invalidation --distribution-id E1HTVES7IBA1GD --paths /index.html
       
 artifacts:
   files:
