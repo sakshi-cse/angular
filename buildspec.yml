@@ -19,6 +19,7 @@ phases:
      commands:
       - aws s3 cp dist s3://${S3_BUCKET} --recursive
       - echo Build completed on `date`
+      - aws cloudfront create-invalidation --distribution-id ER1T36AVEPI92 --paths /index.html
     
       
 artifacts:
