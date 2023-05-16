@@ -19,7 +19,7 @@ phases:
      commands:
       - aws s3 sync dist s3://${S3_BUCKET} --recursive
       - echo Build completed on `date`
-      - aws cloudfront create-invalidation --distribution-id E1HTVES7IBA1GD --paths /index.html
+    
       
 artifacts:
   files:
