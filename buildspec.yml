@@ -1,7 +1,7 @@
 version: 0.2
 env:
   variables:
-    S3_BUCKET: "abc-173"
+    S3_BUCKET: "angular-site-first-12"
 phases:
   install:
     runtime-versions:
